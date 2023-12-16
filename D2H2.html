@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+</head>
+<body>
+<a-scene>
+<!--Asset Management System-->
+<a-assets>
+    <a-assets-item id="city" src="scene.gltf"></a-assets-item>
+</a-assets>
+<a-entity gltf-model="#city"></a-entity>
+<a-entity light="intensity:1.5" position="-20 25 30"></a-entity>
+<!--Sky-->
+<a-entity position="0 4 15">
+    <a-camera>
+        <a-cursor></a-cursor>
+    </a-camera>
+</a-entity>
+<a-box color="blue" height="2" width="1" depth="1" position="0 0 -1"
+animation__drive="dur: 3000; easing: linear; from: 0 0 -1; to: 0 0 4.5; loop: -1; property: position;"
+></a-box>
+<a-box color="yellow" height="2" width="1" depth="1" position="0 0 -13"
+animation__drive="dur: 3000; easing: linear; from: 0 0 -13; to: 0 0 -7.5; loop: -1; property: position;"
+></a-box>
+</a-scene>
+</body>
+</html>
